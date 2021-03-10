@@ -1,37 +1,38 @@
 import streamlit as st
-# To make things easier later, we're also importing numpy and pandas for
-# working with sample data.
 import numpy as np
+import matplotlib.pyplot as plt
 import pandas as pd
 
 st.title("Coût réel d'un achat")
 
 st.write(
-  "Faire une dépense c'est utiliser du capital que l'on aurait pu investir ailleurs sur le long terme. Quel est le coût réel à long terme d'un achat unique ou d'un abonnement récurrent si l'on prend en compte l'opportunité d'investissement perdue ? ")
-
-st.write("Here's our first attempt at using data to create a table:")
-st.write(pd.DataFrame({
-    'first column': [1, 2, 3, 4],
-    'second column': [10, 20, 30, 40]
-}))
-
-if st.checkbox('Show dataframe'):
-    chart_data = pd.DataFrame(
-       np.random.randn(20, 3),
-       columns=['a', 'b', 'c'])
-
-    st.line_chart(chart_data)
-
-df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
-})
-
-df
+  "Faire une dépense c'est consommer du capital que l'on aurait potentiellement investi ailleurs sur le long terme. Quel est le coût réel d'un achat unique ou d'un abonnement récurrent si l'on prend en compte cette opportunité d'investissement perdue ? ")
 
 
-option = st.sidebar.selectbox(
-    'Which number do you like best?',
-     df['first column'])
+if st.checkbox('Voir les formules'):
+    st.text('ICI LES FORMULES')
 
-'You selected:', option
+category = st.sidebar.radio(
+     "Type de dépense :",
+     ('Achat unique', 'Abonnement'))
+
+def generate_price_label(cat):
+  switcher = {
+    "Achat unique": "Prix d'achat",
+    "Abonnement": "Coût annuel"
+  }
+  return switcher[cat]
+
+price = st.sidebar.number_input(generate_price_label(category))
+taux = st.sidebar.slider("Taux d'intérêt de vos investissements :", 0.0, 10.0, 4.0, 0.01)
+duree = st.sidebar.slider("Durée de l'investissement en année :", 0, 50, 15)
+
+fig, ax = plt.subplots()
+
+t = np.arange(0.0, 5.0, 0.01)
+s = np.cos(2*np.pi*t)
+line, = ax.plot(t, s, lw=2)
+
+
+ax.set_ylim(-2, 2)
+st.pyplot(fig)
