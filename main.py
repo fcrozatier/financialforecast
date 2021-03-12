@@ -1,47 +1,70 @@
+import json
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 from babel.numbers import format_currency
 #import pandas as pd
 
-st.title("Coût réel d'un achat")
+# Setup language translation
+with open('translate.json', 'r') as json_data:
+    translate = json.loads(json_data.read())
 
-st.write(
-  "Faire une dépense c'est consommer du capital que l'on aurait potentiellement investi ailleurs sur le long terme. Quel est le coût réel d'un achat unique ou d'un abonnement récurrent si l'on prend en compte cette opportunité d'investissement perdue ? ")
+user_lang = st.sidebar.radio(
+     "",
+     ('English', 'Français'), index=1)
+
+lang = 'fr' if user_lang == 'Français' else 'en'
 
 
-if st.checkbox('Voir les formules'):
+st.title(translate["title"][lang])
+st.write(translate["intro"][lang])
+
+if st.checkbox(translate["formulas"][lang]):
     st.text('ICI LES FORMULES')
 
 category = st.sidebar.radio(
-     "Type de dépense :",
-     ('Achat unique', 'Abonnement'))
+     translate["category"]["label"][lang],
+     (translate["category"]["values"][lang][0],
+     translate["category"]["values"][lang][1]))
 
-def generate_price_label(cat):
-  switcher = {
-    "Achat unique": "Prix d'achat",
-    "Abonnement": "Coût annuel"
-  }
-  return switcher[cat]
-
-price = st.sidebar.number_input(generate_price_label(category), 100)
-rate = st.sidebar.slider("Taux d'intérêt de vos investissements :", 0.0, 10.0, 4.0, 0.01)
-time = st.sidebar.slider("Durée de l'investissement en année :", 0, 50, 15)
-
+price = st.sidebar.number_input(
+    translate["price label"][lang][category], 100)
+rate = st.sidebar.slider(translate["rate label"][lang], 0.0, 10.0, 4.0, 0.01)
+time = st.sidebar.slider(translate["duration label"][lang], 0, 50, 15)
 
 t = np.arange(0.0, 50, 0.01)
-s = price * np.power(1 + rate / 100, t)
-cost = price * np.power(1 + rate / 100, time)
-formatted_cost = format_currency(round(cost,2), 'EUR', locale="fr_FR")
+
+# Create appropriate functions to plot
+if category == translate["category"]["values"][lang][0]:
+  s = price * np.power(1 + rate / 100, t)
+  cost = price * np.power(1 + rate / 100, time)
+elif category == translate["category"]["values"][lang][1]:
+  s = (price * 100 / rate) * ( np.power(1 + rate / 100, t) - 1)
+  cost = (price * 100 / rate) * ( np.power(1 + rate / 100, time) - 1)
+
+formatted_cost = format_currency(
+  round(cost, 2),
+  translate["currency"][lang],
+  locale=translate["locale"][lang]
+  )
 
 fig, ax = plt.subplots()
 ax.plot(t,s)
 ax.plot([time],[cost], 'ro')
-ax.annotate('{} €'.format(round(cost,2)), xy=(time, cost), xytext=(0, -10), textcoords="offset points", ha="center", va="top", color="red")
-ax.set(xlabel='Années', ylabel='Coût (€)',
-       title="Evolution du coût")
+ax.annotate(
+  formatted_cost,
+  xy=(time, cost), xytext=(0, -10),
+  textcoords="offset points", ha="center", va="top",
+  color="red"
+  )
+ax.set(
+  xlabel=translate["plot"][lang]["xlabel"],
+  ylabel=translate["plot"][lang]["ylabel"],
+  title=translate["plot"][lang]["title"]
+  )
 ax.grid()
 
 st.pyplot(fig)
 
-st.write("Coût d'opportunité après {} années : **{}**".format(time, formatted_cost))
+
+st.write(translate["conclusion"][lang].format(time, formatted_cost))

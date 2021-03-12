@@ -1,0 +1,66 @@
+{
+  "title": {
+    "fr": "Coût réel d'un achat",
+    "en": "Real cost of a purchase"
+  },
+  "intro": {
+    "fr": "Faire une dépense c'est consommer du capital qu'on aurait potentiellement investi ailleurs à long terme. Quel est le coût réel d'un achat unique ou d'un abonnement récurrent si l'on prend en compte cette opportunité d'investissement perdue ? ",
+    "en": "When you buy an item you use capital you could have invested in the long term. What is the real cost of making a one-off purchase or buying a subscription when you take this opportunity cost into account?"
+  },
+  "formulas": {
+    "fr": "Voir les formules",
+    "en": "Check the formulas"
+  },
+  "category": {
+    "label": {
+      "fr": "Type de dépense",
+      "en": "Expense type"
+    },
+    "values": {
+      "fr": ["Achat unique", "Abonnement"],
+      "en": ["One-off purchase", "Subscription"]
+    }
+  },
+  "price label": {
+    "fr": {
+      "Achat unique": "Prix d'achat",
+      "Abonnement": "Coût annuel"
+    },
+    "en": {
+      "One-off purchase": "Cost",
+      "Subscription": "Annual fee"
+    }
+  },
+  "rate label": {
+    "fr": "Taux d'intérêt de vos investissements",
+    "en": "Rate of return of your investments"
+  },
+  "duration label": {
+    "fr": "Durée de l'investissement en année",
+    "en": "Duration of your investment (years)"
+  },
+  "currency": {
+    "fr": "EUR",
+    "en": "USD"
+  },
+  "locale": {
+    "fr": "fr_FR",
+    "en": "en_US"
+  },
+  "plot": {
+    "fr": {
+      "xlabel": "Années",
+      "ylabel": "Coût (€)",
+      "title": "Evolution du coût d'opportunité"
+    },
+    "en": {
+      "xlabel": "Years",
+      "ylabel": "Cost ($)",
+      "title": "Evolution of the opportunity cost"
+    }
+  },
+  "conclusion": {
+    "fr": "Coût d'opportunité après {} années : **{}**",
+    "en": "Opportunity cost after {} years: **{}**"
+  }
+}
