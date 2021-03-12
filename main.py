@@ -1,4 +1,5 @@
 import json
+import markdown
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,13 +15,6 @@ user_lang = st.sidebar.radio(
      ('English', 'Français'), index=1)
 
 lang = 'fr' if user_lang == 'Français' else 'en'
-
-
-st.title(translate["title"][lang])
-st.write(translate["intro"][lang])
-
-if st.checkbox(translate["formulas"][lang]):
-    st.text('ICI LES FORMULES')
 
 category = st.sidebar.radio(
      translate["category"]["label"][lang],
@@ -38,7 +32,7 @@ t = np.arange(0.0, 50, 0.01)
 if category == translate["category"]["values"][lang][0]:
   s = price * np.power(1 + rate / 100, t)
   cost = price * np.power(1 + rate / 100, time)
-elif category == translate["category"]["values"][lang][1]:
+else:
   s = (price * 100 / rate) * ( np.power(1 + rate / 100, t) - 1)
   cost = (price * 100 / rate) * ( np.power(1 + rate / 100, time) - 1)
 
@@ -64,7 +58,15 @@ ax.set(
   )
 ax.grid()
 
-st.pyplot(fig)
 
+st.title(translate["title"][lang])
+st.write(translate["intro"][lang])
+
+if st.checkbox(translate["formula"][lang]):
+  file_name = translate["formula path"][lang][category]
+  st.markdown(open(file_name, 'r').read())
+
+
+st.pyplot(fig)
 
 st.write(translate["conclusion"][lang].format(time, formatted_cost))

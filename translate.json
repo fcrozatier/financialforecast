@@ -5,11 +5,21 @@
   },
   "intro": {
     "fr": "Faire une dépense c'est consommer du capital qu'on aurait potentiellement investi ailleurs à long terme. Quel est le coût réel d'un achat unique ou d'un abonnement récurrent si l'on prend en compte cette opportunité d'investissement perdue ? ",
-    "en": "When you buy an item you use capital you could have invested in the long term. What is the real cost of making a one-off purchase or buying a subscription when you take this opportunity cost into account?"
+    "en": "When buying something you use capital you could have invested in the long term. What is the real cost of making a one-off purchase or buying a subscription when you take this opportunity cost into account?"
   },
-  "formulas": {
-    "fr": "Voir les formules",
-    "en": "Check the formulas"
+  "formula": {
+    "fr": "Voir la formule",
+    "en": "Display the formula"
+  },
+  "formula path": {
+    "fr": {
+      "Achat unique": "./formulas/one-off-fr.md",
+      "Abonnement": "./formulas/subscription-fr.md"
+    },
+    "en": {
+      "One-off purchase": "./formulas/one-off-en.md",
+      "Subscription": "./formulas/subscription-en.md"
+    }
   },
   "category": {
     "label": {
