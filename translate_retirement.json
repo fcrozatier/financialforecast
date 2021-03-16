@@ -4,8 +4,8 @@
     "en": "How long before retirement?"
   },
   "intro": {
-    "fr": "Par effet de levier des intérêts cumulés, un capital régulièrement enrichi avec l'épargne annuelle augmente rapidement. Au bout de combien d'années les intérêts générés sont-ils supérieurs aux besoins annuels ?",
-    "en": "With compoud interest, the capital made of yearly savings can rise quickly. How long does it take before the generated interests are greater to the annual needs?"
+    "fr": "Avec les intérêts cumulés, un capital régulièrement enrichi par l'épargne annuelle augmente rapidement. Après combien d'années les intérêts générés sont-ils supérieurs aux besoins annuels ?",
+    "en": "With compoud interest, the capital made of yearly savings can rise quickly. How long does it take before the generated interests are greater than the annual needs?"
   },
   "formula": {
     "fr": "Voir les formules",
