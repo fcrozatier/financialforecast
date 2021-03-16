@@ -1,25 +1,19 @@
 {
   "title": {
-    "fr": "Temps d'épargne avant la retraite",
+    "fr": "Temps d'épargne avant retraite",
     "en": "How long before retirement?"
   },
   "intro": {
-    "fr": "Avec l'effet de levier des intérêts cumulés, un capital régulièrement enrichi de l'épargne annuelle augmente rapidement. Au bout de combien d'années les intérêts générés par le placement sont-ils supérieurs aux besoins annuels ?",
-    "en": "Thanks to compoud interest, the capital made of your yearly savings can rise quickly. How long does it take before the generated interests are superior to your annual needs?"
+    "fr": "Avec l'effet de levier des intérêts cumulés, un capital régulièrement enrichi de l'épargne annuelle augmente rapidement. Au bout de combien d'années les intérêts générés sont-ils supérieurs aux besoins annuels ?",
+    "en": "Thanks to compoud interest, the capital made of yearly savings can rise quickly. How long does it take before the generated interests are superior to the annual needs?"
   },
   "formula": {
     "fr": "Voir la formule",
     "en": "Display the formula"
   },
   "formula path": {
-    "fr": {
-      "Achat unique": "./formulas/one-off-fr.md",
-      "Abonnement": "./formulas/subscription-fr.md"
-    },
-    "en": {
-      "One-off purchase": "./formulas/one-off-en.md",
-      "Subscription": "./formulas/subscription-en.md"
-    }
+    "fr": "./formulas/retirement-fr.md",
+    "en": "./formulas/retirement-en.md"
   },
   "salary": {
     "fr": "Salaire annuel",
@@ -41,7 +35,7 @@
     "fr": {
       "xlabel": "Taux d'épargne",
       "ylabel": "Années",
-      "with capital": "Avec un capital initial",
+      "with capital": "Avec capital initial",
       "without capital": "Sans capital initial",
       "title": "Temps avant la retraite fonction du taux d'épargne"
     },

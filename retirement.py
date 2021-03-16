@@ -7,9 +7,8 @@ import matplotlib.pyplot as plt
 
 def widget(translate, lang):
   if st.checkbox(translate["formula"][lang]):
-    # file_name = translate["formula path"][lang]
-    # st.markdown(open(file_name, 'r').read())
-    st.markdown('Formule ici')
+    file_name = translate["formula path"][lang]
+    st.markdown(open(file_name, 'r').read())
 
   # Sliders
   salary = st.number_input(translate["salary"][lang], 10000)

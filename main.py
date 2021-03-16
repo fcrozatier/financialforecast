@@ -1,10 +1,6 @@
 import json
 import streamlit as st
 import importlib
-# import numpy as np
-# import matplotlib.pyplot as plt
-# from babel.numbers import format_currency
-# import pandas as pd
 
 # Sidebar menu
 user_lang = st.sidebar.radio(
