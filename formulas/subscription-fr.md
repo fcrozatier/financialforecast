@@ -1,6 +1,6 @@
-Notons $x$ le coût annuel d'un abonnement.
+Soit $x$ le coût annuel d'un abonnement.
 
-En investissant cette somme chaque année à un taux d'intérêt $t$, on aurait la relation suivante entre $x_n$ le capital de l'année $n$ et $x_{n+1}$ celui de l'année suivante :
+En investissant cette somme chaque année à un taux d'intérêt $t$, on a la relation suivante entre $x_n$ le capital de l'année $n$ et $x_{n+1}$ celui de l'année suivante :
 
 $$
   x_{n+1} = (1+t)x_n + x
@@ -33,7 +33,7 @@ $$
 \end{aligned}
 $$
 
-Au bout de $n$ années, un investissement au taux $t$ alimenté d'une valeur fixée $x$ par an a donc une valeur de
+Au bout de $n$ années, cet investissement au taux $t$ alimenté d'une valeur fixée $x$ par an a donc une valeur de
 
 $$
   \dfrac{x}{t}((1+t)^n-1)

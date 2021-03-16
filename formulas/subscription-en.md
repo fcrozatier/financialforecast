@@ -33,7 +33,7 @@ $$
 \end{aligned}
 $$
 
-After $n$ years, an investment with a rate of return $t$, increased of a fixed amount $x$ per year is worth
+After $n$ years, this investment with a rate of return $t$, increased by a fixed amount $x$ every year is worth
 
 $$
   \dfrac{x}{t}((1+t)^n-1)

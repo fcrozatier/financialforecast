@@ -17,12 +17,19 @@ a_{n+1} &= K_{n+1}+\dfrac{es}{t}\\
 \end{aligned}
 $$
 
-Hence $a_n=(1+t)^n a_0=(1+t)^n(K+\dfrac{es}{t})$
+Hence
+
+$$
+\begin{aligned}
+  a_n &= (1+t)^n a_0\\
+      &= (1+t)^n(K+\dfrac{es}{t})
+\end{aligned}
+$$
 
 It follows that
 
 $$
-K_n = (1+t)^n (K+\dfrac{es}{t}) -\dfrac{es}{t}
+  K_n = (1+t)^n (K+\dfrac{es}{t}) -\dfrac{es}{t}
 $$
 
 Retirement is achieved year $N$ if the return on capital of this year ($K_N \times t$) is greater than or equal to the annual need (salary - savings: $s - es = s(1-e)$)

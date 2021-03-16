@@ -1,4 +1,4 @@
-Notons $s$ le salaire annuel, $e$ le taux d'épargne annuel, $t$ le taux de retour de l'investissement et $K$ le capital initial.
+Soit $s$ le salaire annuel, $e$ le taux d'épargne annuel, $t$ le taux de retour de l'investissement et $K$ le capital initial.
 
 La relation entre les capitaux $K_n$ et $K_{n+1}$ des années $n$ et $n+1$ est :
 
@@ -17,12 +17,19 @@ a_{n+1} &= K_{n+1}+\dfrac{es}{t}\\
 \end{aligned}
 $$
 
-Donc $a_n=(1+t)^n a_0=(1+t)^n(K+\dfrac{es}{t})$
+Donc
+
+$$
+\begin{aligned}
+  a_n &= (1+t)^n a_0\\
+      &= (1+t)^n(K+\dfrac{es}{t})
+\end{aligned}
+$$
 
 On en déduit
 
 $$
-K_n = (1+t)^n (K+\dfrac{es}{t}) -\dfrac{es}{t}
+  K_n = (1+t)^n (K+\dfrac{es}{t}) -\dfrac{es}{t}
 $$
 
 La retraite est atteinte l'année $N$ lorsque le rendement du capital de cette année ($K_N \times t$) est supérieur au besoin annuel (salaire - quantité épargnée : $s - es = s(1-e)$)
@@ -40,7 +47,7 @@ $$
 \end{aligned}
 $$
 
-Ainsi la retraite est atteinte au bout d'un nombre d'années $N$ valant :
+Ainsi la retraite est atteinte au bout d'un nombre d'années $N$ tel que :
 
 $$
   N = \dfrac{\ln\left(\dfrac{s}{K t+es}\right)}{\ln(1+t)}

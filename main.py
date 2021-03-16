@@ -5,7 +5,9 @@ import importlib
 # Sidebar menu
 user_lang = st.sidebar.radio(
      "",
-     ('English', 'Français'), index=1)
+     ('English', 'Français'),
+     index=0
+)
 
 lang = 'fr' if user_lang == 'Français' else 'en'
 
@@ -15,7 +17,8 @@ with open('translate.json', 'r') as json_data:
 widget = st.sidebar.radio(
   'Widget',
   (translate["widget"][lang][0],
-  translate["widget"][lang][1])
+  translate["widget"][lang][1]),
+  index=1
 )
 
 if (widget == translate["widget"][lang][0] ):

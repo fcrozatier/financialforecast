@@ -1,15 +1,15 @@
 {
   "title": {
-    "fr": "Temps d'épargne avant retraite",
+    "fr": "Temps d'épargne avant la retraite",
     "en": "How long before retirement?"
   },
   "intro": {
-    "fr": "Avec l'effet de levier des intérêts cumulés, un capital régulièrement enrichi de l'épargne annuelle augmente rapidement. Au bout de combien d'années les intérêts générés sont-ils supérieurs aux besoins annuels ?",
-    "en": "Thanks to compoud interest, the capital made of yearly savings can rise quickly. How long does it take before the generated interests are superior to the annual needs?"
+    "fr": "Par effet de levier des intérêts cumulés, un capital régulièrement enrichi avec l'épargne annuelle augmente rapidement. Au bout de combien d'années les intérêts générés sont-ils supérieurs aux besoins annuels ?",
+    "en": "With compoud interest, the capital made of yearly savings can rise quickly. How long does it take before the generated interests are greater to the annual needs?"
   },
   "formula": {
-    "fr": "Voir la formule",
-    "en": "Display the formula"
+    "fr": "Voir les formules",
+    "en": "Display the formulas"
   },
   "formula path": {
     "fr": "./formulas/retirement-fr.md",

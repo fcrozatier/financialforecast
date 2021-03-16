@@ -9,7 +9,8 @@ def widget(translate, lang):
   category = st.sidebar.radio(
     translate["category"]["label"][lang],
     (translate["category"]["values"][lang][0],
-    translate["category"]["values"][lang][1]))
+    translate["category"]["values"][lang][1]),
+    1)
 
   if st.checkbox(translate["formula"][lang]):
     file_name = translate["formula path"][lang][category]
