@@ -1,9 +1,7 @@
 import json
 import streamlit as st
 import numpy as np
-from babel.numbers import format_currency
 import matplotlib.pyplot as plt
-
 
 def widget(translate, lang):
   if st.checkbox(translate["formula"][lang]):
@@ -25,8 +23,13 @@ def widget(translate, lang):
 
   fig, ax = plt.subplots()
   if capital != 0:
-    ax.plot(e,s, label=translate["plot"][lang]["with capital"], color="blue")
-  ax.plot(e,t, label=translate["plot"][lang]["without capital"], color="orange")
+    ax.plot(
+      e, s,
+      label=translate["plot"][lang]["with capital"].format(capital),
+      color="blue")
+  ax.plot(
+    e,t,
+    label=translate["plot"][lang]["without capital"], color="orange")
   ax.plot([savings],[time], 'ro')
   ax.annotate(
     round(time,1),

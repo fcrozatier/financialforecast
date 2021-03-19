@@ -1,12 +1,12 @@
 Let $s$ be the annual salary, $e$ the savings ratio, $t$ the rate of return of the investment and $K$ the initial capital.
 
-The relation between capitals $K_n$ and $K_{n+1}$ corresponding to year $n$ and $n+1$ is :
+The relation between capitals $K_n$ and $K_{n+1}$ corresponding to year $n$ and $n+1$ is:
 
 $$
   K_{n+1}=(1+t)K_n+es
 $$
 
-Note that the sequence $a_n=K_n+\dfrac{es}{t}$ is geometric with common ratio $(1+t)$ :
+Note that the sequence $a_n=K_n+\dfrac{es}{t}$ is geometric with common ratio $(1+t)$:
 
 $$
 \begin{aligned}
@@ -40,7 +40,7 @@ So we must find the smallest $N$ such that
 
 $$
 \begin{aligned}
-  ((1+t)^N (K+\dfrac{es}{t}) -\dfrac{es}{t})t &\geq s(1-e) \\
+  \left((1+t)^N (K+\dfrac{es}{t}) -\dfrac{es}{t}\right)t &\geq s(1-e) \\
   (1+t)^N (K t+es) &\geq s \\
   (1+t)^N  &\geq \dfrac{s}{K t+es}\\
   N\ln(1+t)  &\geq \ln\left(\dfrac{s}{K t+es}\right)
@@ -59,4 +59,4 @@ $$
   N = \dfrac{-\ln\left(e\right)}{\ln(1+t)}
 $$
 
-So in this case the time to retirement does not depend on salary, but only on the savings rate and the rate of return!
+So in this case the time to retirement does not depend on the salary, but only on the savings rate and the rate of return!

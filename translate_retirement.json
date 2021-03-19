@@ -35,15 +35,15 @@
     "fr": {
       "xlabel": "Taux d'épargne",
       "ylabel": "Années",
-      "with capital": "Avec capital initial",
+      "with capital": "Capital initial {:,.0f}€",
       "without capital": "Sans capital initial",
       "title": "Temps avant la retraite fonction du taux d'épargne"
     },
     "en": {
       "xlabel": "Savings rate",
       "ylabel": "Years",
-      "with capital": "With initial capital",
-      "without capital": "Without initial capital",
+      "with capital": "Initial capital ${:,.0f}",
+      "without capital": "No initial capital",
       "title": "Time before retirement depending on savings rate"
     }
   },
