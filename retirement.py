@@ -2,6 +2,8 @@ import json
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+
 
 def widget(translate, lang):
   if st.checkbox(translate["formula"][lang]):
@@ -49,3 +51,46 @@ def widget(translate, lang):
   st.pyplot(fig)
 
   st.write(translate["conclusion"][lang].format(round(time,1)))
+
+  ## 3D surface
+  maximum = 1000
+  S = np.arange(maximum)
+  B = np.arange(maximum)
+  G = np.zeros([len(S),len(B)])
+
+  rate = 4
+  capital = 0
+
+  for s in S:
+    for b in B:
+      if(s<=b):
+        G[s][b] = np.nan
+      else:
+        G[s][b] = np.divide((np.log(s) - np.log(capital * rate / 100 + s - b)), np.log(1 + rate / 100))
+
+  fig = go.Figure(data=[go.Surface(
+      z=G,
+      x=B,
+      y=S,
+      name="",
+      text="hey",
+      hoverinfo="x+y",
+      hovertemplate = "Salary: %{y}<br>Spendings: %{x}<br>Years: %{z:.1f}",
+      )])
+  fig.update_layout(
+    title='Years before retirement',
+    autosize=True,
+    scene = dict(
+        camera_eye=dict(x=-1.0, y=2.2, z=0.6),
+        xaxis = dict(nticks=8, range=[0,maximum],),
+        yaxis = dict(nticks=4, range=[0,maximum],),
+        xaxis_title='Annual spendings',
+        yaxis_title='Annual salary',
+        zaxis_title='Years',
+        xaxis_showspikes=False,
+        yaxis_showspikes=False,
+        ),
+    margin=dict(l=20, r=10, b=25, t=25),
+    )
+
+  st.write(fig)
