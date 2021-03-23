@@ -76,10 +76,6 @@ def widget(translate, lang):
           y=S,
           name="",
           hovertemplate = "Salary: %{y}<br>Spendings: %{x}<br>Years: %{z:.1f}",
-          # contours = {
-          #     "x": {"show": True, "start": 1.5, "end": 2, "size": 0.04, "color":"white"},
-          #     "z": {"show": True, "start": 0.5, "end": 0.8, "size": 0.05}
-          # },
           )])
 
       fig.update_traces(
@@ -114,13 +110,12 @@ def widget(translate, lang):
               yaxis_showspikes=False,
               ),
           width=500,
-          autosize=True,
-          margin=dict(l=0, r=0, b=0, t=0, autoexpand=True),
+          margin=dict(l=0, r=0, b=0, t=0),
         )
 
       return fig
 
-  def equivalence():
+  def equivalence(salary, savings, capital, rate):
     return round(
       -salary / (capital * rate / 100 - salary + salary * savings / 100 ),
        2)
@@ -131,7 +126,9 @@ def widget(translate, lang):
   bonus = st.checkbox(translate["bonus label"][lang])
 
   if(bonus):
-    st.write(translate["bonus equivalence"][lang].format(equivalence()))
+    st.write(
+      translate["bonus equivalence"][lang].format(
+        equivalence(salary, savings, capital, rate)))
 
     visual_proof = translate["bonus visual proof file"][lang]
     st.markdown(open(visual_proof, 'r').read())
