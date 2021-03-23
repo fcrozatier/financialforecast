@@ -103,7 +103,6 @@ def widget(translate, lang):
 
       fig.update_layout(
           title='',
-          autosize=True,
           scene = dict(
               camera_eye=dict(x=-1.0, y=2.2, z=1.6),
               xaxis = dict(nticks=6),
@@ -114,7 +113,9 @@ def widget(translate, lang):
               xaxis_showspikes=False,
               yaxis_showspikes=False,
               ),
-          margin=dict(l=0, r=0, b=0, t=0),
+          width=500,
+          autosize=True,
+          margin=dict(l=0, r=0, b=0, t=0, autoexpand=True),
         )
 
       return fig
