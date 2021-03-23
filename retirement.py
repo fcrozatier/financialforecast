@@ -123,9 +123,8 @@ def widget(translate, lang):
   st.write('')
   st.write('')
   st.write('')
-  bonus = st.checkbox(translate["bonus label"][lang])
 
-  if(bonus):
+  with st.beta_expander(translate["bonus label"][lang]):
     st.write(
       translate["bonus equivalence"][lang].format(
         equivalence(salary, savings, capital, rate)))
