@@ -30,15 +30,16 @@ else:
   with open('translate_retirement.json', 'r') as json_data:
     translate = json.loads(json_data.read())
 
-# Contribute
-st.sidebar.write('')
-st.sidebar.write('')
-st.sidebar.write('')
-st.sidebar.markdown("##### Contribute: [github](https://github.com/fcrozatier/financialforecast)"
-  )
 
 # Shared content
 st.title(translate["title"][lang])
 st.write(translate["intro"][lang])
 
 widget(translate, lang)
+
+# Contribute
+st.sidebar.write('')
+st.sidebar.write('')
+st.sidebar.write('')
+st.sidebar.markdown("##### Contribute: [github](https://github.com/fcrozatier/financialforecast)"
+  )
