@@ -1,4 +1,3 @@
-import json
 import streamlit as st
 import numpy as np
 from babel.numbers import format_currency
