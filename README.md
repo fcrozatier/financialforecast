@@ -10,11 +10,11 @@ Try the [live demo](https://financialforecast.herokuapp.com/)
 
 ## Contribute
 
-Contributions are happily considered:
+Contributions are happily encouraged:
 
 1. You can suggest a new widget, or improve the current ones.
 1. You can improve the text and explanations.
-1. You can translate to your language.
+1. You can translate to a different language.
 
 Don't hesitate to PR or contact me if you have any questions.
 
