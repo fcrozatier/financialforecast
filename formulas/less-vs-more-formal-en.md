@@ -34,4 +34,4 @@ But that's impossible since the salary is already bigger than the spendings.
 **So the slope is always steeper in the direction of savings**. Which means that decreasing the spendings by one dollar has more impact on the time to retirement than increasing the salary by one dollar.
 
 Finaly, note that if the spendings decrease by 1 dollar, to have the same impact on the time to retirement by an increase of salary, the increase must compensate the above ratio, and so **decreasing spendings by 1 dollar is equivalent to increasing the salary by $\dfrac{s}{p - Kt}$ dollars**.
-Which gives the formula used at the begining of this section.
+Which is the formula used in the bonus of the time to retirement widget.

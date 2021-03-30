@@ -33,4 +33,4 @@ Or ceci est impossible puisque le salaire est déjà supérieur aux dépenses.
 
 **Donc la pente est toujours plus raide dans la direction de l'épargne**. Ce qui signifie qu'une diminution des dépenses d'un euro a plus d'impact sur le temps de départ à la retraite qu'une augmentation de salaire de un euro.
 
-Finalement, remarquons que si les dépenses diminuent de 1 euros, pour avoir un impact similaire sur le temps de départ en retraite par une augmentation de salaire, celle-ci doit compenser le ratio précédent. De sorte que **1 euro de dépenses en moins équivaut à $\dfrac{s}{p - Kt}$ euros de salaire en plus.** C'est la formule utilisée au début de cette section.
+Finalement, remarquons que si les dépenses diminuent de 1 euros, pour avoir un impact similaire sur le temps de départ en retraite par une augmentation de salaire, celle-ci doit compenser le ratio précédent. De sorte que **1 euro de dépenses en moins équivaut à $\dfrac{s}{p - Kt}$ euros de salaire en plus.** C'est la formule utilisée dans le bonus du widget temps de départ en retraite.

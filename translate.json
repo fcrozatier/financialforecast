@@ -1,6 +1,14 @@
 {
   "widget": {
-    "fr": ["Coût d'opportunité", "Temps de départ en retraite"],
-    "en": ["Opportunity cost calculator", "Time to retirement"]
+    "fr": [
+      "Coût d'opportunité",
+      "Temps de départ en retraite",
+      "Dépenser moins ou gagner plus ?"
+    ],
+    "en": [
+      "Opportunity cost calculator",
+      "Time to retirement",
+      "Spend less or earn more?"
+    ]
   }
 }

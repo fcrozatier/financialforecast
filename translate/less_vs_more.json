@@ -1,0 +1,18 @@
+{
+  "title": {
+    "fr": "Vaut-il mieux dépenser moins ou gagner plus ?",
+    "en": "Is it better to spend less or earn more?"
+  },
+  "intro": {
+    "fr": "Un euro d'épargne gagné par une augmentation de salaire est-il équivalent à un euro d'épargné obtenu en dépensant moins ? Autrement dit ces deux moyens d'épargne ont-ils le même impact sur le temps de départ en retraite ?",
+    "en": "Is one dollar of savings earned by an increase in salary equivalent to one dollar of savings earned by spending less? Do these two means have the same impact on the time to retirement? "
+  },
+  "visual proof": {
+    "fr": "./formulas/less-vs-more-intro-fr.md",
+    "en": "./formulas/less-vs-more-intro-en.md"
+  },
+  "formal proof": {
+    "fr": "./formulas/less-vs-more-formal-fr.md",
+    "en": "./formulas/less-vs-more-formal-en.md"
+  }
+}
