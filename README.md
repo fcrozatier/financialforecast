@@ -1,9 +1,10 @@
 # Understand your finances
 
-This app offers two widgets to help understand finances and compound interests through visualization:
+This app offers three widgets to help understand finances and compound interests through visualization:
 
 1. Opportunity cost calculator: How much does a one-off purchase or a subscription really cost in the long run if you invested the money instead.
 2. Time to retirement: When will your capital be big enough for you to retire depending on your salary, savings rate, interest rate and initial capital.
+3. Spending less vs earning more: has one dollar gained from an increase in salary the same impact on your time to retirement as one dollar gained from a decrease in spendings?
 
 Try the [live demo](https://financialforecast.herokuapp.com/)
 
