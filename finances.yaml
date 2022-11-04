@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: understand-your-finances
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8501
+  selector:
+    app: understand-your-finances
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: understand-your-finances
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: understand-your-finances
+  template:
+    metadata:
+      name: understand-your-finances
+      labels:
+        app: understand-your-finances
+    spec:
+      containers:
+        - name: understand-your-finances
+          image: fcrozatier/finances:1.0.0
+          ports:
+          - containerPort: 8501
