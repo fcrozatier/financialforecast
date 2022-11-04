@@ -6,8 +6,6 @@ This app offers three widgets to help understand finances and compound interests
 2. Time to retirement: When will your capital be big enough for you to retire depending on your salary, savings rate, interest rate and initial capital.
 3. Spending less vs earning more: has one dollar gained from an increase in salary the same impact on your time to retirement as one dollar gained from a decrease in spendings?
 
-Try the [live demo](https://financialforecast.herokuapp.com/)
-
 ## Contribute
 
 Contributions are happily encouraged:
